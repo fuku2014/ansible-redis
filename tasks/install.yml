@@ -103,6 +103,7 @@
     home: "{{ redis_install_dir }}"
     shell: /bin/false
     system: yes
+  when: redis_user != "root"
 
 - name: create /var/run/redis
   file:
